@@ -63,20 +63,11 @@
 
 	<!-- *** Input Title here
 	============================================= -->
-	<title>Embodiment Bot</title>
+	<title>Your Inquiry Bot</title>
 
 	<!-- *** LOAD THE CUES HERE 
 	============================================= -->
-	<script src="embodimentcues.js" type="text/javascript"></script>
-	
-
-	<!-- *** LOAD COACHING METHODS HERE SEPARATE FROM THE CUES -->
-	<script src="coachingmethods.js" type="text/javascript"></script>
-
-	<!-- Define inquiry starting point and type here -->
-	<script>
-	var TypeOfInquiry = "embodiment";
-	 </script>
+	<script src="custominquiries.js" type="text/javascript"></script>
 
 
 
@@ -112,11 +103,7 @@
 
 						}
 
-						#typed-strings{
-							font-weight:900;
-							font-size:29px;
-							line-height: 29px;
-						}
+					
 
 						</style>
 
@@ -125,8 +112,8 @@
 							<div class="">
 								<div style:"display:block !important;" data-animate="fadeInUp" data-delay="200"  id="typed-strings" >
 									
-									<span style="font-weight:900;font-size:29px;" id="typed" ></span>
-									<span style="font-weight:900;font-size:29px;" id="typed2" ></span>
+									<span  id="typed" ></span>
+									<span style=""id="typed2" ></span>
 
 								</div>
 								
@@ -135,20 +122,6 @@
 						</div>
 
 						<div class="line" style="border-top:3px;"></div>
-	<!-- <div id="" class="enclose problem" >
-							<div>
-									<span id="yes-button"  style:""data-delay="400"   class=" button-border button-rounded button-large   forceVisible" style="font-size:35px; font-weight:900; float:left;" >Yes</span >
-			</div>
-
-						<div >
-
-									<span  class=" button-border button-rounded button-large  forceVisible" style="font-size:35px; float:right;font-weight:900;">No</span>
-			</div>
-
-		</div> -->
-
-
-
 	<!-- typed experiment -->
 	<script>
 
@@ -212,20 +185,37 @@
 							<div class=""></div>
 
 
-								<div class="intentionArea"></div>
-									<label for="intentionArea">Intentions </label>
+								<div class="inquiryArea"></div>
+									<label for="inquiryArea">inquiries </label>
 									<h6 class="grey">Use the 2nd Person style of writing.  e.g. "love myself" --> "love yourself"<h6>
 
-								<div><input id="intention1"  type="text"  value="test1" class="sm-form-control intention " /></div>
-								<div><input id="intention2"  type="text"  value="test2" class="sm-form-control intention" /></div>
-								<div><input id="intention3"  type="text"  value="" class="sm-form-control intention" /></div>
-								<div><input id="intention4"  type="text"  value="" class="sm-form-control intention" /></div>
-								<div><input id="intention5"  type="text"  value="" class="sm-form-control intention" /></div>
-								<div><input id="intention6"  type="text"  value="" class="sm-form-control intention" /></div>
-								<div><input id="intention7"  type="text"  value="" class="sm-form-control intention" /></div>
-								<div><input id="intention8"  type="text"  value="" class="sm-form-control intention" /></div>
-								<div><input id="intention9"  type="text"  value="" class="sm-form-control intention" /></div>
-								<div><input id="intention10" type="text"  value="" class="sm-form-control intention" /></div>
+								<div class=""><input id="inquiry1" type="text" id="inquiry-list" class="sm-form-control inquiry " /></div>
+
+								<div class=""><input id="inquiry2" type="text"  value="" class="sm-form-control inquiry" /></div>
+
+
+								<div class=""><input id="inquiry3" type="text"  value="" class="sm-form-control inquiry" /></div>
+
+
+								<div class=""><input id="inquiry4" type="text"  value="" class="sm-form-control inquiry" /></div>
+
+
+								<div class=""><input id="inquiry5" type="text"  value="" class="sm-form-control inquiry" /></div>
+
+
+								<div class=""><input id="inquiry6" type="text"  value="" class="sm-form-control inquiry" /></div>
+
+
+								<div class=""><input id="inquiry7" type="text"  value="" class="sm-form-control inquiry" /></div>
+
+
+								<div class=""><input id="inquiry8" type="text"  value="" class="sm-form-control inquiry" /></div>
+
+
+								<div class=""><input id="inquiry9" type="text"  value="" class="sm-form-control inquiry" /></div>
+
+
+								<div class=""><input id="inquiry10" type="text"  value="" class="sm-form-control inquiry" /></div>
 
 				
 
@@ -242,9 +232,11 @@
 						
 							<div class="btn-group col-6">
 	
-									<!-- 		<button class="btn button button-border nomargin" type="" id="" name="" value="">Add Intention</button>
-									<button class="btn button button-border nomargin" type="" id="" name="" value="">Remove intention</button> -->
+									<!-- 		<button class="btn button button-border nomargin" type="" id="" name="" value="">Add inquiry</button>
+									<button class="btn button button-border nomargin" type="" id="" name="" value="">Remove inquiry</button> -->
 									<button class="btn button button-border nomargin"  id="createBot" href="#" >Create Bot</button>
+									<button class="btn button button-border nomargin"  id="resetBot" href="#" >Reset Bot</button>
+									<!-- <button class="btn button button-border nomargin"  id="saveBot" href="#" >Save Bot</button> -->
 							</DIV>
 							<div class="btn-group col-6">
 		
@@ -268,6 +260,66 @@
 		</section><!-- #content end -->
 
 	
+<script type="text/javascript">
+
+// $("#savedBotActivator").click(function(){
+// 	reloadTheListFromLocalStorage()
+
+// });
+// startBotCreation();
+// 		function promptUserForNameOfSavedBot(){
+// 			// get a name for it
+// 			prompt("Name your saved bot");
+// 			// save to local storage under that name
+// 			localStorage.setItem(savedBotName, JSON.stringify(inquiryList));
+// 	};
+// 		function createItemInListForThis(){
+// 			$("savedBotsArea").append("<DIV class='savedBotActivator'>+ savedBotName +</DIV>")
+
+// 		};
+// 		loadThatItemToList();
+// 		saveTheListToLocalStorage();
+		
+// 		// on doc load
+// 		function reloadTheListFromLocalStorage(){
+// 			inquiryList = JSON.parse(localStorage.inquiryListStored);
+// 			loadinquiryListIntoInputs();
+// 			};
+ 
+
+// function saveBot(){
+
+
+
+// 		startBotCreation();
+// 		var savedBotName = promptUserForNameOfSavedBot();
+// 		localStorage.setItem(savedBotName, JSON.stringify(inquiryList));
+// 		createItemInListForThis();
+// 		loadThatItemToList();
+// 		saveTheListToLocalStorage();
+// 		// on doc load
+		
+// 		reloadTheListFromLocalStorage();
+ 
+
+
+
+// };
+
+// $("#saveBot").click(function(){
+
+// 	saveBot();
+// });
+</script>
+
+
+		<section id="savedBotsArea"><!-- #content begin -->
+
+
+
+
+
+		</section><!-- #content end -->
 
 
 
@@ -438,8 +490,6 @@
 
 			}
 
-// if your brand new, then 
-
 			// function incrementInjunction(){
 
 			// }
@@ -447,44 +497,43 @@
 
 		var tpj=jQuery;
 		jQuery.noConflict();
-		var intentionList = [];
 
 
 		jQuery(document).ready(function( $ ) {
 
+// define inquirylist
+// set the values of the inputs to it
 
 
 
  	// fire up the bot when create bot is clicked
  	$("#createBot").click(function startBotCreation(){
-		console.log("INTENTION LIST IS NOW "+intentionList);
-
-		// create an empty array for storing user intentions
-		 var intentionlist = [];
  		// clear the array to prime it for creating anew
- 
+ 		inquiryList = []
  		// save all field values into a variable
-		var intentions = $(".intention");
+		var inquiries = $(".inquiry");
 		// inject each variable into an array
-		for(var i = 0; i < intentions.length; i++){
-			if((intentions[i]).value !== ""){
+		for(var i = 0; i < inquiries.length; i++){
+			if((inquiries[i]).value !== ""){
 
-			    intentionList.push($(intentions[i]).val());
-			}else{return}
+			    inquiryList.push($(inquiries[i]).val());
+			}
 		}
 		// log the array
-		console.log("INTENTION LIST IS NOW 1"+intentionList);
-		numberOfLessons = intentionList.length;
-		console.log("length of list is "+intentionList.length);
+		console.log(inquiryList);
+		numberOfLessons = inquiryList.length;
+		console.log("length of list is "+inquiryList.length);
 
-		if (intentionList.length > 0){
+		if (inquiryList.length > 0){
 
 			 		botInitiated = true;
 			 		console.log("bot initiated")
 					$("#slider").click();
-					localStorage.setItem("embodimentcues", JSON.stringify(intentionList));
+					localStorage.setItem("inquiryListStored", JSON.stringify(inquiryList));
 
 		}
+
+
 
 		// Notify user of successful bot creation, then fade out message after 2 sec
 	 	$("#botCreatedNotifier").fadeIn(500,(function(){
@@ -508,39 +557,50 @@
 			  // Code that uses jQuery's $ can follow here.
 			// Code that uses other library's $ can follow here.
 			console.log("lesson is " +lessonNumber);
-			console.log("stored intention list is "+ localStorage.getItem("embodimentcues"));
+			console.log("stored inquiry list is "+ localStorage.getItem("inquiryListStored"));
+			console.log("inquiry list2 " +localStorage.inquiryListStored2);
 
 
-			function getSavedEmbodimentList(){
+			function getSavedinquiryList(){
+							console.log("11");
 
-				intentionList = JSON.parse(localStorage.embodimentliststored);};
+				// inquiryList = JSON.parse(localStorage.inquiryListStored);
+			};
 			//  for each, grab the inputs and fill them
-			
-			function loadIntentionListIntoInputs(){
-											console.log("11");
+				
 
-				$('#intention1').val(intentionList[0]);
-				$('#intention2').val(intentionList[1]);
-				$('#intention3').val(intentionList[2]);
-				$('#intention4').val(intentionList[3]);
-				$('#intention5').val(intentionList[4]);
-				$('#intention6').val(intentionList[5]);
-				$('#intention7').val(intentionList[6]);
-				$('#intention8').val(intentionList[7]);
-				$('#intention9').val(intentionList[8]);
-				$('#intention10').val(intentionList[9]);
+ 	$("#resetBot").click(function(){
+ 		loadinquiryListIntoInputs();
+ 	});
+
+
+
+			function loadinquiryListIntoInputs(){
+				console.log("11ddd");
+
+				$('#inquiry1').val(inquiryList[0]);
+				$('#inquiry2').val(inquiryList[1]);
+				$('#inquiry3').val(inquiryList[2]);
+				$('#inquiry4').val(inquiryList[3]);
+				$('#inquiry5').val(inquiryList[4]);
+				$('#inquiry6').val(inquiryList[5]);
+				$('#inquiry7').val(inquiryList[6]);
+				$('#inquiry8').val(inquiryList[7]);
+				$('#inquiry9').val(inquiryList[8]);
+				$('#inquiry10').val(inquiryList[9]);
 
 			};
 
-// ## if the intention list is saved, initiate the bot with that intention list
 
-		if (typeof localStorage.emobodimentcues == "undefined"){
+// ## if the inquiry list is saved, initiate the bot with that inquiry list
+
+		if (typeof localStorage.inquiryListStored == "undefined"){
 			
 		}else{
 			// grab values from storage, parse into an array
 			
-			getSavedIntentionList();
-			loadIntentionListIntoInputs();
+			getSavedinquiryList();
+			loadinquiryListIntoInputs();
 			botInitiated = true;
 
 }
@@ -563,30 +623,40 @@
 
 				
 			}
-// turning off auto play until intentions are defined
+// turning off auto play until inquiries are defined
 
 
- $(function welcomeTheUser(){
+			$(function welcomeTheUser(){
 
 				setInjunction();
 				$("#typed").typed({
 					strings: [
-						"^2000 Welcome.^2000",
-						"I want to coach on you on embodied inquiry approaches. ^2000",
+						"^2000 Hi.^2000", 
+						"^2000 My name is aiBOT.^2000",
+						"^2000 I want to help you be happy.^2000",
+						"^2000 Can we play together?^2000",
+						"^2000 Lets try inquiry, ok?^2000",
+						
 
-					],				
+					],
+
+            		onStringTyped: function() {reset();},
+
 					typeSpeed: 0,
 					backDelay: 600,
+				    backSpeed: -500,
+
 		      		callback: function(){
-		      			
-		      			startBotCreation();
+		      			console.log(autoplay);
+		      			console.log("got here");
 
 		      			if(autoplay){
 		      				console.log("got here");
 		      				setTimeout(
 		      					function(){
-		      						runTheBot();
-		      					}, 8000)	};
+		      						console.log("got here");
+		      						$("#slider").click();
+		      					}, 4000)	};
 		     				 }
 							});
 
@@ -595,7 +665,7 @@
 
  function moveToTheNextLesson(){
 		// define the total number of lessons here
-		numberOfLessons = intentionList.length;
+		numberOfLessons = inquiryList.length;
 
 		// if your through the total number of inquiries, start over, otherwise increment each time... 
 
@@ -604,8 +674,23 @@
 
  }  
 
-function runTheBot() {
-					if((typeof botInitiated) == null){}else{
+function reset(){
+
+}
+
+
+// enable removal of any typed text when called on callback, replacing of other text
+function remove(){
+        $('.typed-cursor').hide();
+        $(".removeMe").typed({
+            strings: ["part", "segment"],
+            typeSpeed: 50,
+        });
+}
+
+			// when the yes button is clicked, perform this function
+			$("#slider").click(function() {
+					if(botInitiated){
 						moveToTheNextLesson();
 
 			// fade out first span then perform callback
@@ -627,10 +712,14 @@ function runTheBot() {
 						      	$("#typed").typed({
 						      		strings: typed.strings,
 						      		typeSpeed: 0,
-						      		backDelay: 600,
+						      		backDelay: 4000,
+						      		backSpeed: -500,
+						      		
+									
+
+
 						      		// if autoplay is enabled, simulate click after 10s
 						      		callback: function(){
-						      			console.log(autoplay);
 
 						      			if(autoplay){
 						      				setTimeout(
@@ -647,12 +736,7 @@ function runTheBot() {
 					}
 			    	
 
-			    };
-
-
-
-			// when the yes button is clicked, perform this function
-			$("#slider").on("click", "runTheBot()" );
+			    });
 
 			});
 

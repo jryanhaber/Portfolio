@@ -154,6 +154,8 @@ typed.strings =  [
 	"Lets take a moment to be with the full gravity of that you exist right now... ^4000",
 	"One of your aims is "+ intentionList[4] + "  ^2000 <br><br>Are you fulfilling this intent to your satisfaction? ^4000 <br><br>If not, "+coachingMethodSelection.invitation
 				]   
+	    break;
+
   case 6:
 typed.strings =  [
 	"Surreal.^2000",
