@@ -532,8 +532,37 @@
 					localStorage.setItem("inquiryListStored", JSON.stringify(inquiryList));
 
 		}
+// @@ Laila
+ 	// grab all the input values
+ 	$("#saveBot").click(function saveTheBot(){
+ 		// clear the array to prime it for creating anew
+ 		inquiryList = []
+ 		// save all field values into a variable
+		var inquiries = $(".inquiry");
+		// inject each variable into an array
+		for(var i = 0; i < inquiries.length; i++){
+			if((inquiries[i]).value !== ""){
+
+			    inquiryList.push($(inquiries[i]).val());
+			}
+			}
 
 
+		// if theres something in the list of inquiries and you hit save
+		if (inquiryList.length > 0){
+			// ask for a name
+		// convert to rails... 
+			var nameOfFileToBeSaved = prompt("name it please");
+		// if theres a name provided
+				if (nameOfFileToBeSaved !== ""){
+			// save to database (@@@LAILA)
+				localStorage.setItem("inquiryListStored", JSON.stringify(inquiryList));
+				console.log("success, saved")
+		}else {console.log("gotta put a name in bro")}
+
+}
+
+}
 
 		// Notify user of successful bot creation, then fade out message after 2 sec
 	 	$("#botCreatedNotifier").fadeIn(500,(function(){

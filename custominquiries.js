@@ -1,3 +1,14 @@
+// Hello.
+//
+// This is JSHint, a tool that helps to detect errors and potential
+// problems in your JavaScript code.
+//
+// To start, simply enter some JavaScript anywhere on this page. Your
+// report will appear on the right side.
+//
+// Additionally, you can toggle specific options in the Configure
+// menu.
+
 // extracting files to templatable pieces.. this is just the cues for coaching
 
 
@@ -66,8 +77,8 @@
 
 var inquiryList = [
 
-   "What would it take for you to be who you must be to make $25k this week? " 
-,  "Are you willing to receive 25k this week?" 
+   "What would it take for you to be who you must be to make $25k this week? " ,
+  "Are you willing to receive 25k this week?" 
 ,  "What is in the way of you being who you must be in order to make all the money you could dream of?" 
 ,  "Who or what are you unwilling to be such that if you allowed yourself to be it, would allow you to create more money then you know what to do with?"
 ,  "What would it take to appreciate even more all the money you have already received?"
@@ -84,7 +95,7 @@ var toExperienceList = [
 "^2000<br><br>Notice all that this brings up."
 
 
-]
+];
 
 var beWithThis = [
 "^4000<br><br>Be with this question.",
@@ -92,7 +103,7 @@ var beWithThis = [
 "^4000<br><br>Let this question be here.",
 "^4000<br><br>Try just being with this question."
 
-]
+];
 
 var identifyObstacle = [
 "^4000<br><br>Notice what comes up, including any thoughts, ^1000 feelings, ^1000 and resistance <br>that come up in being with this question",
@@ -101,7 +112,7 @@ var identifyObstacle = [
 "^4000<br><br>Notice specifically any decisions, ^1000 judgments ^1000, conclusions ^1000 and computations, ^1000 <br>that come up in being with this question",
 "^4000<br><br>Notice specifically any limitations, ^1000 contractions, ^1000 conflations, ^1000 and fixed, solidified, or rigid points of view, ^1000 <br>that come up in being with this question"
 
-]
+];
 
 
  var clearIt = [
@@ -115,7 +126,7 @@ var identifyObstacle = [
 
 
 
- ]
+ ];
 
 
 		// 
@@ -141,7 +152,7 @@ var identifyObstacle = [
 					return indexCreated;
 
 
-				}
+				};
 
 				var coachingStyle;
 				var openingStatement;
@@ -151,10 +162,10 @@ var identifyObstacle = [
 				if(coachingStyle == "inquiry"){
 
 					 openingStatement = "";
-				} else if(coachingStyle = "intention"){
+				} else if(coachingStyle == "intention"){
 					openingStatement = "One of your aims is to ";
-				}  
-				console.log(coachingStyle + ": " + openingStatement)
+        }  else{}
+				console.log(coachingStyle + ": " + openingStatement);
 
 				
 
@@ -201,34 +212,34 @@ function setInjunction() {
 	typed.strings =  [
 	openingStatement+ inquiryList[0] + beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime] + clearIt[clearingIndexCreatedThisTime]
  
-					]    
+					]  ;  
 	break;
   case 2:
 typed.strings =  [
 	openingStatement+ inquiryList[1] +  beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
 		
 				
-					]   
+					]   ;
     break;
   case 3:
 typed.strings =  [
 	"Amazing. ^2000",
 	"Let's go deeper now. ^2000",
 	openingStatement + inquiryList[2] +  beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
-				]   
+				]   ;
     break;
   case 4:
 typed.strings =  [
 	"Wonderful. ^2000",
 	openingStatement + inquiryList[3] +  beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
-				]   
+				]   ;
     break;
   case 5:
 typed.strings =  [
 	"Perfect. ^2000",
 	"Lets take a moment to be with the full gravity of that you exist right now... ^4000 <br>" +
 	openingStatement + inquiryList[4] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
-				]   
+				]   ;
 	    break;
 
   case 6:
@@ -236,7 +247,7 @@ typed.strings =  [
 	"Surreal.^2000",
 	"Lets keep exploring.^2000",
 	openingStatement + inquiryList[5] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
-				]   
+				]   ;
     break;
 
   case 7:
@@ -244,38 +255,38 @@ typed.strings =  [
 	"Awesome.^2000",
 	"I am loving sharing this with you.^2000",
 	openingStatement + inquiryList[6] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
-				]   
+				]   ;
     break;
   case 8:
 typed.strings =  [
 	"Amazing ^2000",
 	openingStatement + inquiryList[7] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
-				]   
+				]   ;
     break;
   case 9:
 typed.strings =  [
 	"Wonderful.^2000",
 	openingStatement+ inquiryList[8] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
-				]   
+				]   ;
     break;
   case 10:
 typed.strings =  [
 	"Perfect.^2000",
 	openingStatement+ inquiryList[9] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
-				]   
+				]   ;
     break;
 
   case 11:
 typed.strings =  [
 	"Incredible.^2000",
 	"You are an amazing, bad ass, phenomenal human being.^2000",
-					] 
+					] ;
     break;
   default:
 typed.strings =  [
 	"_", 
 	"Hmm... I am having a moment here, can you reload the page and lets start over?",
-					]  
+					]  ;
 
 
 
