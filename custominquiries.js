@@ -41,6 +41,12 @@
 					invitation: "^2000 <br>Notice what is in the way of this.^2000 <br>Welcome this, any resistance to this, and let it all go. ^2000 <br> "
 
 				};
+
+
+
+
+				var debugTyping = false;
+
 			
 				integral[0] = {
 					invitation: "what would it take to be coherent with this intent?"
@@ -110,7 +116,7 @@ var identifyObstacle = [
 "^4000<br><br>Notice any resistance, wanting to control, ^1000 wanting for security, ^1000 wanting for approval, ^1000 <br>that come up in being with this question",
 "^4000<br><br>Notice specifically any expectations, ^1000 projections, ^1000 separations, ^1000 and rejections, ^1000 <br>that come up in being with this question",
 "^4000<br><br>Notice specifically any decisions, ^1000 judgments ^1000, conclusions ^1000 and computations, ^1000 <br>that come up in being with this question",
-"^4000<br><br>Notice specifically any limitations, ^1000 contractions, ^1000 conflations, ^1000 and fixed, solidified, or rigid points of view, ^1000 <br>that come up in being with this question"
+"^4000<br><br>Notice specifically any limitations, ^1000 contractions, ^1000 conflations, ^1000 and fixed, solidified, or rigid points of view, ^1000 that come up in being with this question"
 
 ];
 
@@ -183,7 +189,7 @@ function random(itemCount, arraySelectedFrom){
 
 
 function setInjunction() {
-		console.log("inquiry list is in here "+inquiryList);
+	if(debugTyping){	console.log("inquiry list is in here "+inquiryList);}
  		// choose a random # based on the number of items in the array
  		var indexCreatedThisTime = calculateRandomIndex(coachingMethods);
  		// use that number to grab a random coaching method
@@ -223,20 +229,17 @@ typed.strings =  [
     break;
   case 3:
 typed.strings =  [
-	"Amazing. ^2000",
 	"Let's go deeper now. ^2000",
 	openingStatement + inquiryList[2] +  beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
 				]   ;
     break;
   case 4:
 typed.strings =  [
-	"Wonderful. ^2000",
 	openingStatement + inquiryList[3] +  beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
 				]   ;
     break;
   case 5:
 typed.strings =  [
-	"Perfect. ^2000",
 	"Lets take a moment to be with the full gravity of that you exist right now... ^4000 <br>" +
 	openingStatement + inquiryList[4] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
 				]   ;
@@ -244,7 +247,6 @@ typed.strings =  [
 
   case 6:
 typed.strings =  [
-	"Surreal.^2000",
 	"Lets keep exploring.^2000",
 	openingStatement + inquiryList[5] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
 				]   ;
@@ -252,45 +254,39 @@ typed.strings =  [
 
   case 7:
 typed.strings =  [
-	"Awesome.^2000",
 	"I am loving sharing this with you.^2000",
 	openingStatement + inquiryList[6] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
 				]   ;
     break;
   case 8:
 typed.strings =  [
-	"Amazing ^2000",
 	openingStatement + inquiryList[7] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
 				]   ;
     break;
   case 9:
 typed.strings =  [
-	"Wonderful.^2000",
 	openingStatement+ inquiryList[8] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
 				]   ;
     break;
   case 10:
 typed.strings =  [
-	"Perfect.^2000",
 	openingStatement+ inquiryList[9] +   beWithThis[beingWithThisIndexThisTime] + identifyObstacle[identifyObstacleIndexThisTime]  + clearIt[clearingIndexCreatedThisTime]
 				]   ;
     break;
 
   case 11:
 typed.strings =  [
-	"Incredible.^2000",
 	"You are an amazing, bad ass, phenomenal human being.^2000",
 					] ;
     break;
   default:
 typed.strings =  [
-	"_", 
 	"Hmm... I am having a moment here, can you reload the page and lets start over?",
 					]  ;
 
 
 
 				}
-   console.log("typed strings are now "+typed.strings);
+   if(debugTyping){console.log("typed strings are now "+typed.strings)};
 // return typed.strings;
     }

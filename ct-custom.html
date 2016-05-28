@@ -27,7 +27,7 @@
 
 		<!-- Stylesheets
 		============================================= -->
-		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+ 		<link rel="stylesheet" href="googleFonts.css" type="text/css" />
 		<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 		<link rel="stylesheet" href="style.css" type="text/css" />
 		<link rel="stylesheet" href="css/dark.css" type="text/css" />
@@ -63,7 +63,7 @@
 
 	<!-- *** Input Title here
 	============================================= -->
-	<title>Your Bot</title>
+	<title>AI Coaching Bot v2</title>
 
 	<!-- *** LOAD THE CUES HERE 
 	============================================= -->
@@ -253,7 +253,8 @@
 									<!-- 		<button class="btn button button-border nomargin" type="" id="" name="" value="">Add Intention</button>
 									<button class="btn button button-border nomargin" type="" id="" name="" value="">Remove intention</button> -->
 									<button class="btn button button-border nomargin"  id="createBot" href="#" >Create Bot</button>
-							</DIV>
+<!-- 									<button class="btn button button-border nomargin"  id="saveBotTemp" href="#" >Save Bot</button>
+ -->							</DIV>
 							<div class="btn-group col-6">
 		
 									<div id="botCreatedNotifier" style="display:none;">Bot Created / Updated, scroll up to meet your bot</div>
@@ -274,6 +275,34 @@
 			</div>
 
 		</section><!-- #content end -->
+		<section><!-- #saved begin -->
+
+
+
+
+
+			<div class="content-wrap">
+
+				<div class="container clearfix">
+
+					<!-- Post Content
+					============================================= -->
+					<div class=" nobottommargin">
+
+
+
+<div id="savedBotsSpot">
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+		</section><!-- #saved end -->
 
 	
 
@@ -302,6 +331,7 @@
 				<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
 				<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
 				<script type="text/javascript" src="include/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+				<script type="text/javascript" src="linkGen.js"></script>
 				<!-- handlebars -->
 
 
@@ -521,7 +551,6 @@
 			//  for each, grab the inputs and fill them
 			
 			function loadIntentionListIntoInputs(){
-											console.log("11");
 
 				$('#intention1').val(intentionList[0]);
 				$('#intention2').val(intentionList[1]);
@@ -536,6 +565,30 @@
 
 			};
 
+// **
+			function loadIntentionListIntoInputs2(name){
+				// testing a load function for named items loaded
+
+				$('#intention1' ).val(localStorage.name.intentionList[0]);
+				$('#intention2' ).val(localStorage.name.intentionList[1]);
+				$('#intention3' ).val(localStorage.name.intentionList[2]);
+				$('#intention4' ).val(localStorage.name.intentionList[3]);
+				$('#intention5' ).val(localStorage.name.intentionList[4]);
+				$('#intention6' ).val(localStorage.name.intentionList[5]);
+				$('#intention7' ).val(localStorage.name.intentionList[6]);
+				$('#intention8' ).val(localStorage.name.intentionList[7]);
+				$('#intention9' ).val(localStorage.name.intentionList[8]);
+				$('#intention10').val(localStorage.name.intentionList[9]);
+
+			};
+
+// goal, create links that load via url
+// create a 2nd mode defined by var modeX and set to true in the url
+// get that url search it for the string
+
+
+
+
 
 // ## if the intention list is saved, initiate the bot with that intention list
 
@@ -548,7 +601,7 @@
 			loadIntentionListIntoInputs();
 			botInitiated = true;
 
-}
+		}
 
 	
 			// when the page loads, run the typed function

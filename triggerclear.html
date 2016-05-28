@@ -11,17 +11,17 @@
 		<!-- meta data -->
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="author" content="Jonathan Haber B.A. Cmt" />
-		<meta name="description" content="An Interactive Tech Portfolio Resume Site for Recruiters and Tech Companies." />
+		<meta name="description" content="A Coaching Bot That Facilitates Trauma Healing via Somatic Experiencing and NLP, Based on Chaotic Systems Theory, Aiming to Build New Nueral Pathways in the Unconscious Mind to Provide Flexibility from Frozen States Of Being (Dissassociation or 'Freezing Up')." />
 
 		<!-- Twitter Card data -->
 		<meta name="twitter:card" value="summary">
 
 		<!-- Open Graph data -->
-		<meta property="og:title" content="Jonathan Haber's Portfolio" />
+		<meta property="og:title" content="Synthesis Trauma Coaching Bot" />
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="http://synthesisrecruiting.com/Package-HTML/HTML/Synthesis_2.html" />
+		<meta property="og:url" content="http://synthesisrecruiting.com/Package-HTML/HTML/triggerclear.html" />
 		<meta property="og:image" content="http://synthesisrecruiting.com/Package-HTML/HTML/images/p/m_backdrop.png" />
-		<meta property="og:description" content="The Beginnings of an AI Coaching Bot that facilitates inquiry in the access consciousness style, soon to be in many styles. " />
+		<meta property="og:description" content="A Coaching Bot That Facilitates Trauma Healing via Somatic Experiencing and NLP, Based on Chaotic Systems Theory, Aiming to Build New Nueral Pathways in the Unconscious Mind to Provide Flexibility from Frozen States Of Being (Dissassociation or 'Freezing Up')." />
 
 
 
@@ -63,13 +63,13 @@
 
 	<!-- *** Input Title here
 	============================================= -->
-	<title>AI Inquiry Bot v2</title>
+	<title>Trigger Clearing Bot</title>
 
 	<!-- *** LOAD THE CUES HERE 
 	============================================= -->
-	<script src="custominquiries.js" type="text/javascript"></script>
-	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-	<script src="firebase_bridge.js" type="text/javascript"></script>
+	<script src="triggerClear.js" type="text/javascript"></script>
+
+
 
 
 
@@ -162,7 +162,7 @@
 
 		<!-- Content
 		============================================= -->
-		<section id="content">
+		<section id="bot_creation_zone" style="display:none;" >
 
 			<div class="content-wrap">
 
@@ -350,7 +350,7 @@ $("#saveBotFinally").click(function(){
 });
 </script>
 
-		<section><!-- #content begin -->
+		<section style="display:none;" ><!-- #content begin -->
 			
 
 	<div class="content-wrap">
@@ -739,10 +739,14 @@ if(debugTyping){
 				$("#typed").typed({
 					strings: [
 						"^2000 Hi.^2000", 
-						"^2000 My name is aiBOT.^2000",
-						"^2000 I want to help you be happy.^2000",
-						"^2000 Can we play together?^2000",
-						"^2000 Lets try inquiry, ok?^2000",
+						"^2000 So, your here because something triggered you...",
+						"I would love to coach you on this.",
+						"Any time you are ready for the next step just click or tap the screen",
+						"I may wait for you occasionally as well", 
+						"You will know that though, because I will put a ... under my words",
+						"Just click or tap the screen in those moments when you are ready<br><br>..."
+
+					
 						
 
 					],
@@ -772,7 +776,7 @@ if(debugTyping){
 
  function moveToTheNextLesson(){
 		// define the total number of lessons here
-		numberOfLessons = inquiryList.length;
+		numberOfLessons = 9;
 
 		// if your through the total number of inquiries, start over, otherwise increment each time... 
 
@@ -830,9 +834,12 @@ function remove(){
 
 						      			if(autoplay){
 						      				setTimeout(
-						      					function(){
-						      						$("#slider").click();
-						      					}, 8000)	};
+				function(){
+					
+					if(botMode.autoplay === true){$("#slider").click();}
+
+						}, 8000)
+					};
 						     				 }
 
 				      			});			

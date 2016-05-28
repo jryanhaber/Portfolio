@@ -11,17 +11,17 @@
 		<!-- meta data -->
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="author" content="Jonathan Haber B.A. Cmt" />
-		<meta name="description" content="An Interactive Tech Portfolio Resume Site for Recruiters and Tech Companies." />
+		<meta name="description" content="A Coaching Bot That Facilitates Trauma Healing via Somatic Experiencing and NLP, Based on Chaotic Systems Theory, Aiming to Build New Nueral Pathways in the Unconscious Mind to Provide Flexibility from Frozen States Of Being (Dissassociation or 'Freezing Up')." />
 
 		<!-- Twitter Card data -->
 		<meta name="twitter:card" value="summary">
 
 		<!-- Open Graph data -->
-		<meta property="og:title" content="Jonathan Haber's Portfolio" />
+		<meta property="og:title" content="Synthesis Trauma Coaching Bot" />
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="http://synthesisrecruiting.com/Package-HTML/HTML/Synthesis_2.html" />
+		<meta property="og:url" content="http://synthesisrecruiting.com/Package-HTML/HTML/triggerclear.html" />
 		<meta property="og:image" content="http://synthesisrecruiting.com/Package-HTML/HTML/images/p/m_backdrop.png" />
-		<meta property="og:description" content="The Beginnings of an AI Coaching Bot that facilitates inquiry in the access consciousness style, soon to be in many styles. " />
+		<meta property="og:description" content="A Coaching Bot That Facilitates Trauma Healing via Somatic Experiencing and NLP, Based on Chaotic Systems Theory, Aiming to Build New Nueral Pathways in the Unconscious Mind to Provide Flexibility from Frozen States Of Being (Dissassociation or 'Freezing Up')." />
 
 
 
@@ -63,13 +63,13 @@
 
 	<!-- *** Input Title here
 	============================================= -->
-	<title>AI Inquiry Bot v2</title>
+	<title>Goal Being Bot</title>
 
-	<!-- *** LOAD THE CUES HERE 
+	<!-- *** LOAD THE CUES HERE %tem
 	============================================= -->
-	<script src="custominquiries.js" type="text/javascript"></script>
-	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-	<script src="firebase_bridge.js" type="text/javascript"></script>
+	<script src="goal_being.js" type="text/javascript"></script>
+
+
 
 
 
@@ -162,7 +162,7 @@
 
 		<!-- Content
 		============================================= -->
-		<section id="content">
+		<section id="bot_creation_zone"  >
 
 			<div class="content-wrap">
 
@@ -188,7 +188,7 @@
 
 
 								<div class="inquiryArea"></div>
-									<label for="inquiryArea">inquiries </label>
+									<label for="inquiryArea">Goals/Aims </label>
 									<h6 class="grey">Use the 2nd Person style of writing.  e.g. "love myself" --> "love yourself"<h6>
 
 								<div class=""><input id="inquiry1" type="text" id="inquiry-list" class="sm-form-control inquiry " /></div>
@@ -295,49 +295,7 @@
 	
 <script type="text/javascript">
 
-// $("#savedBotActivator").click(function(){
-// 	reloadTheListFromLocalStorage()
 
-// });
-// startBotCreation();
-// 		function promptUserForNameOfSavedBot(){
-// 			// get a name for it
-// 			prompt("Name your saved bot");
-// 			// save to local storage under that name
-// 			localStorage.setItem(savedBotName, JSON.stringify(inquiryList));
-// 	};
-// 		function createItemInListForThis(){
-// 			$("savedBotsArea").append("<DIV class='savedBotActivator'>+ savedBotName +</DIV>")
-
-// 		};
-// 		loadThatItemToList();
-// 		saveTheListToLocalStorage();
-		
-// 		// on doc load
-// 		function reloadTheListFromLocalStorage(){
-// 			inquiryList = JSON.parse(localStorage.inquiryListStored);
-// 			loadinquiryListIntoInputs();
-// 			};
- 
-
-// function saveBot(){
-
-
-
-// 		startBotCreation();
-// 		var savedBotName = promptUserForNameOfSavedBot();
-// 		localStorage.setItem(savedBotName, JSON.stringify(inquiryList));
-// 		createItemInListForThis();
-// 		loadThatItemToList();
-// 		saveTheListToLocalStorage();
-// 		// on doc load
-		
-// 		reloadTheListFromLocalStorage();
- 
-
-
-
-// };
 
 $("#saveBot").click(function(){
 
@@ -350,7 +308,7 @@ $("#saveBotFinally").click(function(){
 });
 </script>
 
-		<section><!-- #content begin -->
+		<section ><!-- #content begin -->
 			
 
 	<div class="content-wrap">
@@ -578,7 +536,7 @@ $("#saveBotFinally").click(function(){
 
  var saveTheListToLocalStorage = function(){
 
-	localStorage.setItem("inquiryListStored", JSON.stringify(inquiryList));
+	localStorage.setItem("goalListStored", JSON.stringify(inquiryList));
 
  }
 
@@ -633,7 +591,7 @@ $("#saveBotFinally").click(function(){
 // 		// if theres a name provided
 // 				if (nameOfFileToBeSaved !== ""){
 // 			// save to database (@@@LAILA)
-// 				localStorage.setItem("inquiryListStored", JSON.stringify(inquiryList));
+// 				localStorage.setItem("goalListStored", JSON.stringify(inquiryList));
 // 				console.log("success, saved")
 // 		}else {console.log("gotta put a name in bro")}
 
@@ -665,14 +623,14 @@ $("#saveBotFinally").click(function(){
 			
 if(debugTyping){
 			console.log("lesson is " +lessonNumber);
-			console.log("stored inquiry list is "+ localStorage.getItem("inquiryListStored"));
-			console.log("inquiry list2 " +localStorage.inquiryListStored2);
+			console.log("stored inquiry list is "+ localStorage.getItem("goalListStored"));
+			console.log("inquiry list2 " +localStorage.goalListStored2);
 }
 
 			function getSavedinquiryList(){
 							console.log("11");
 
-				// inquiryList = JSON.parse(localStorage.inquiryListStored);
+				inquiryList = JSON.parse(localStorage.goalListStored);
 			};
 			//  for each, grab the inputs and fill them
 				
@@ -701,7 +659,7 @@ if(debugTyping){
 
 // ## if the inquiry list is saved, initiate the bot with that inquiry list
 
-		if (typeof localStorage.inquiryListStored == "undefined"){
+		if (typeof localStorage.goalListStored == "undefined"){
 			
 		}else{
 			// grab values from storage, parse into an array
@@ -739,10 +697,16 @@ if(debugTyping){
 				$("#typed").typed({
 					strings: [
 						"^2000 Hi.^2000", 
-						"^2000 My name is aiBOT.^2000",
-						"^2000 I want to help you be happy.^2000",
-						"^2000 Can we play together?^2000",
-						"^2000 Lets try inquiry, ok?^2000",
+						"^2000 So, you have goals and ambitions... ^2000",
+						"And each requires a way of being",
+						"A 'Who you must be' in order to make changes in your life ^2000",
+						"I want to  coach you on this ^2000",
+						"Any time you are ready for the next step just click or tap the screen",
+						"I may wait for you occasionally as well", 
+						"You will know that though, because I will put a ... under my words",
+						"Just click or tap the screen in those moments when you are ready<br><br>..."
+
+					
 						
 
 					],
@@ -772,7 +736,7 @@ if(debugTyping){
 
  function moveToTheNextLesson(){
 		// define the total number of lessons here
-		numberOfLessons = inquiryList.length;
+		numberOfLessons = 9;
 
 		// if your through the total number of inquiries, start over, otherwise increment each time... 
 
@@ -830,9 +794,12 @@ function remove(){
 
 						      			if(autoplay){
 						      				setTimeout(
-						      					function(){
-						      						$("#slider").click();
-						      					}, 8000)	};
+				function(){
+					
+					if(botMode.autoplay === true){$("#slider").click();}
+
+						}, 8000)
+					};
 						     				 }
 
 				      			});			
